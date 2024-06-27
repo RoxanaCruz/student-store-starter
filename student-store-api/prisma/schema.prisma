@@ -17,7 +17,7 @@ model Product {
   id          Int         @id @default(autoincrement())
   name        String
   description String
-  price       Dec         @default(0)
+  price       Decimal         @db.Decimal(10,2)
   image_url   String
   category    String
   orderItems  OrderItem[] // Add this line to establish the relationship
@@ -26,8 +26,8 @@ model Product {
 model Order {
   order_id    Int         @id @default(autoincrement())
   customer_id Int
-  total_price Float
-  status      String
+  total_price Decimal     @default(0)  @db.Decimal(10,2) //default price is 0
+  status      String      
   created_at  DateTime    @default(now())
   orderItems  OrderItem[] // Establish one-to-many relationship
 }
@@ -37,7 +37,7 @@ model OrderItem {
   order_id      Int
   product_id    Int
   quantity      Int
-  price         Float
+  price         Decimal @db.Decimal(10,2)
 
   order   Order  @relation(fields: [order_id], references: [order_id])
   product Product @relation(fields: [product_id], references: [id])

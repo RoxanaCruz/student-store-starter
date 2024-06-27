@@ -1,5 +1,6 @@
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
+const orderModel = require("../models/order");
 
 // Function to get all orders
 const getAllOrders = async (req, res) => {
@@ -32,20 +33,26 @@ const getOrderById = async (req, res) => {
 
 // Function to create a new order with order items
 const createOrder = async (req, res) => {
-	const { customer_id, status, items } = req.body;
+	const orderData = req.body;
 
 	try {
-		const newOrder = await prisma.order.create({
-			data: {
-				customer_id,
-				status,
-				orderItems: {
-					create: items,
-				},
-			},
-			include: { orderItems: true },
-		});
+		const newOrder = await orderModel.create(orderData);
 		res.status(201).json(newOrder);
+	} catch (error) {
+		res.status(400).json({ error: error.message });
+	}
+};
+
+const addItemToOrder = async (req, res) => {
+	const orderItemData = req.body;
+	const order_id = req.params.order_id;
+
+	try {
+		const newOrderItem = await orderModel.addItemToOrder(
+			order_id,
+			orderItemData
+		);
+		res.status(201).json(newOrderItem);
 	} catch (error) {
 		res.status(400).json({ error: error.message });
 	}
@@ -89,6 +96,7 @@ module.exports = {
 	getAllOrders,
 	getOrderById,
 	createOrder,
+	addItemToOrder,
 	updateOrder,
 	deleteOrder,
 };
