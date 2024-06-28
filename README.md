@@ -49,7 +49,7 @@ Submitted by: **Roxana Cruz**
 
 ### Walkthrough Video
 
-`<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/fab162b70e4442cb9d7fa2acf1b8267c?sid=f56fed5b-4ae8-419d-a257-e2b0d5c9480e" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>`
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/242556e44bb84677aba6860a5746fa53?sid=57c22ba9-24a6-4342-adb3-87685b27cc5e" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### Reflection
 
