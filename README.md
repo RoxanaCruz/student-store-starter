@@ -55,11 +55,11 @@ Submitted by: **Roxana Cruz**
 
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-The labs had alot of information for the Project. At first i skipped the last part of the lab but laater went back as the material covered in the lab helped alot with the prisma migration for the project.
+The labs had alot of information for the Project. At first i skipped the last part of the lab but later went back as the material covered in the lab helped alot with the prisma migration for the project.
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
 
-If i had more time I would of definitely changed the frontend, aswell as figure out how to add items to the inventory in the student store.
+If I had more time I would of definitely changed the frontend, aswell as figure out how to add items to the inventory in the student store.
 
 - Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
